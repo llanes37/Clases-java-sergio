@@ -59,7 +59,19 @@
          // ? Mostramos el contenido del array
          System.out.println("🧾 Palabras ingresadas: " + Arrays.toString(palabras));
  
-         // ✅ TAREA ALUMNO: modifica el array para que tenga 5 palabras y muestra solo aquellas que tengan más de 5 letras.
+         // ✅ TAREA ALUMNO: modifica el array para que tenga 5 palabras y muestra solo aquellas que empiezan por vocal.
+         palabras = new String[5];
+         for (int i = 0; i < palabras.length; i++) {
+             System.out.print("🔤 Introduce la palabra " + (i + 1) + ": ");
+             palabras[i] = sc.nextLine();
+         }
+
+         System.out.println("📝 Palabras con más de 5 letras:");
+         for (String palabra : palabras) {
+             if (palabra.length() > 5) {
+                 System.out.println(palabra);
+             }
+         }
      }
  
      // 🔹 EJERCICIO 2: BUSCAR UNA PALABRA
